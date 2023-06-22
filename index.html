@@ -32,6 +32,7 @@
             float: right;
             margin-top: 350px;
             margin-left: 1000px;
+            z-index: 2;
 
         }
         .ball{
@@ -43,6 +44,7 @@
             position: absolute;
             margin-top: 750px;
             margin-left: 230px;
+            z-index: 1;
         }
         .gatekeeper{
             background-image: url(qapici.png);
@@ -53,14 +55,21 @@
             height: 300px;
             margin-top: 550px;
             margin-left: 1000px;
+            z-index: 3;
         }
         .r:hover{
             rotate: -30deg;
         }
-        .ball:hover{
-            left: 1300px;
+        .r:hover~.ball{
+            left: 1200px;
             top: 100px;
         }
+
+        .goal{
+            scale: 0;
+        }
+
+
 
     </style> 
 </head>
@@ -71,7 +80,7 @@
      <div class="ball"></div>
      <div class="gatekeeper"></div>
      <div class="stadium"></div>
-     <div class="goal"></div>
+     <div class="goal"> GOAL!</div>
     </div>
     
 </body>
